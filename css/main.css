@@ -147,6 +147,7 @@ ul {
 }
 
 #selecting-name {
+	-moz-transition: all 1s ease-out;
 	-webkit-transition: all 1s ease-out;
 	z-index: 5000;
 	position: relative;
@@ -154,6 +155,7 @@ ul {
 
 #selecting-name.final-winner {
 	color: #333;
+	-moz-transform: scale(2);
 	-webkit-transform: scale(2);
 }
 

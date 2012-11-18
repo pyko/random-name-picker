@@ -3,7 +3,7 @@ Random Name Picker
 
 Simple app that will pick a random name from a list of give names. Will rotate through all the names entered and slowly/eventually pick a winner for the suspense effect if shown on a projector.
 
-Might've gone a bit over the top, but is backed by backbone (with local storage). Uses underscore's shuffle for randomisation.
+Might've gone a bit over the top, but is backed by backbone (with local storage). Uses underscore's shuffle for randomisation. Developed and tested in Chrome (and sort of Firefox) only.
 
 Feel free to change as per your needs :)
 
