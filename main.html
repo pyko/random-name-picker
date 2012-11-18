@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<title>Random Name Picker Demo</title>
+	<!--  libraries -->
+	<script src="js/lib/jquery-v1.8.2.js"></script>
+	<script src="js/lib/underscore-v1.4.2.js"></script>
+	<script src="js/lib/backbone-v0.9.2.js"></script>
+	<script src="js/lib/backbone-localstorage.js"></script>
+
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div id="outer-container">
+	<span class="num-entries"></span>
+	<img src="img/dummy-logo.png"/>
+	<div id="entry-container">
+		<div class="sub-title">Enter your name to be in the draw to win!</div>
+		<input id="name-input" type="text" placeholder="enter your name..."/>	
+		<div id="name-list-container">
+			<ul class="name-list left">
+			</ul>
+			<ul class="name-list right">
+			</ul>
+		</div>
+	</div>
+	<div id="winner-container" class="hidden">
+		<div class="sub-title">Randomly selecting a name...are you the lucky winner?</div>
+		<div id="selecting-name"></div>
+	</div>
+	<div id="pick-winner" class="hidden-trigger">pick winner</div>
+	<div id="clear-all-safety" class="hidden-trigger">clear all</div>
+</div>
+
+<!-- Templates -->
+<script type="text/template" id="name-entry-template">
+    <div class="row">
+	    <div class="icon-font remove"></div>      
+	    <div class="name"><%- name %></div>
+    </div>
+</script>
+
+<script type="text/template" id="name-winner-template">
+    <div class="icon-font remove"></div>      
+    <div class="name"><%- name %></div>
+</script>
+</body>
+</html>

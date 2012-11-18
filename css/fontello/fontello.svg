@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20100429 at Thu Nov  1 11:01:24 2012
+ By root
+Copyright (C) 2012 by original authors @ fontello.com
+</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="364" >
+  <font-face 
+    font-family="fontello"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="800"
+    descent="-200"
+    bbox="15 -120 855 720"
+    underline-thickness="50"
+    underline-position="-100"
+    unicode-range="U+0061-0062"
+  />
+<missing-glyph 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".notdef" 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="333" 
+ />
+    <glyph glyph-name="a" unicode="a" horiz-adv-x="500" 
+d="M467 142q17 -17 17 -42t-17 -42t-42 -17t-42 17l-133 151l-133 -151q-17 -17 -42 -17t-42 17t-17 42t17 42l137 158l-137 158q-17 17 -17 42t17 42t42 17t42 -17l133 -151l133 151q17 17 42 17t42 -17t17 -42t-17 -42l-137 -158z" />
+    <glyph glyph-name="b" unicode="b" horiz-adv-x="870" 
+d="M435 720q174 0 297 -123t123 -297t-123 -297t-297 -123t-297 123t-123 297t123 297t297 123zM521 300l153 153l-86 86l-153 -153l-153 153l-86 -86l153 -153l-153 -153l86 -87l153 154l153 -153l86 86z" />
+  </font>
+</defs></svg>
