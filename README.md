@@ -15,8 +15,32 @@ How to use
 
 **Notes**
 
-* If you need to pick another name, hover around the top left of the winning name to reveal the remove icon to remove the name from the list - you can now pick another winner
+* If you need to pick another name, hover around the far left of the winning name to reveal the remove icon to remove the name from the list - you can now pick another winner
 * If you want to clear all the names from the list, click on the 'clear all' in the bottom right hand corner, and click on the new red 'CLEAR ALL' that appears
+
+Entering names via file
+------------------
+If you want to populate the list of names via values from a file, you can reveal the file upload controls by clicking on the 'file upload' trigger in the bottom right.
+
+The upload file will appear in the top left of the screen. You can toggle the visibility of these controls by clicking on the 'file upload' trigger.
+
+The contents of the file should only contain the names to be uploaded. The names will be separated by commas(,), pipes(|) or enters.
+
+For example, the following are valid:
+```
+one,two,three,four
+```
+```
+one|two|three|four
+```
+```
+one
+two
+three
+four
+```
+_Note: I have not focussed on the performance of this app, so upload large files at your own risk!_
+
 
 License
 -------
