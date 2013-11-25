@@ -2,7 +2,8 @@ $(function() {
 	var FADE_DELAY_MS = 800,
 		EXTRA_DELAY = 150,
 		SHOW_NAME_DELAY = 150,
-		MIN_LIST_LENGTH = 60;
+		MIN_LIST_LENGTH = 60,
+		MAX_LIST_LENGTH = 300;
 
 	// Super simple model - really just need it for the collection
 	var NameEntryModel = Backbone.Model.extend({
@@ -188,6 +189,10 @@ $(function() {
 		buildDecentShuffledList: function(){
 			console.log("Shuffle and build list of names");
 			var list = this.getShuffledNames();
+			// Cap at MAX_LIST_LENGTH so the shuffle doesn't take too long
+			if (list.length > MAX_LIST_LENGTH) {
+				list = _.sample(list, MAX_LIST_LENGTH);
+			}
 			// Keep appending shuffled list until we reach a minimum length
 			// min length is only there so the shuffle looks impressive
 			while (list.length < MIN_LIST_LENGTH) {
