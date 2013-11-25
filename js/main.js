@@ -78,6 +78,7 @@ $(function() {
 
 		events: {
 			'keypress #name-input' : 'createEntry',
+			'click #file-trigger' : 'showHideFileUpload',
 			'change #file-input' : 'showFileSample',
 			'click #file-submit' : 'createEntriesFromFile',
 			'click #pick-winner' : 'pickWinner',
@@ -96,9 +97,11 @@ $(function() {
 			Entries.fetch();
 		},
 
-		showFileSample: function(e) {
-			console.log("new file!");
-			
+		showHideFileUpload: function(){
+			$("#file-area").toggle("visible");
+		},
+
+		showFileSample: function(e) {			
 			if (window.File && window.FileReader) {
 				var file = e.target.files[0]; //only one file
 				$("#file-sample").text("type: " + file.type);

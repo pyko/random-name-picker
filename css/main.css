@@ -54,18 +54,44 @@ body {
 
 #clear-all {
 	position: absolute;
-	bottom: 50px;
-	right: 20px;
+	bottom: 30px;
+	right: 100px;
 	color: #ccc;
 	background-color: #c33;
 	font-weight: bold;
 	padding: 3px;
 }
 /* File area */
+#file-trigger {
+	position: absolute;
+	bottom: 50px;
+	right: 10px;
+}
+
 #file-area {
 	position: absolute;
 	top: 30px;
-	left: 50px;
+	left: 30px;
+	display: none;
+}
+
+#file-submit {
+	font-size: 14px;
+	padding: 4px;
+	border: 1px solid #333;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+
+#file-submit:hover {
+	cursor: pointer;
+}
+
+#file-submit:disabled {
+	cursor: not-allowed;
+	border: 1px solid #999;
+	background: #ccc;
+	color: #aaa;
 }
 
 /* Input area */
