@@ -61,6 +61,12 @@ body {
 	font-weight: bold;
 	padding: 3px;
 }
+/* File area */
+#file-area {
+	position: absolute;
+	top: 30px;
+	left: 50px;
+}
 
 /* Input area */
 #name-input {

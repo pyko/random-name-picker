@@ -77,6 +77,8 @@ $(function() {
 
 		events: {
 			'keypress #name-input' : 'createEntry',
+			'change #file-input' : 'showFileSample',
+			'click #file-submit' : 'createEntriesFromFile',
 			'click #pick-winner' : 'pickWinner',
 			'click #pick-another' : 'pickWinner',
 			'click #clear-all-safety' : 'clearAllSafety',
@@ -91,6 +93,46 @@ $(function() {
 			Entries.bind('all', this.render, this);
 
 			Entries.fetch();
+		},
+
+		showFileSample: function(e) {
+			console.log("new file!");
+			
+			if (window.File && window.FileReader) {
+				var file = e.target.files[0]; //only one file
+				$("#file-sample").text("type: " + file.type);
+				var reader = new FileReader();
+				reader.onload = (function(file){
+					return function(e) {
+						var contents = e.target.result || "";
+						// assumed separators: newline comma pipe
+						var result = contents.split(/,|\||\r\n|\r|\n/g);
+						// remove any empty cases
+						result = _.reject(result, function(val){return val === ""});
+						$("#file-sample").data("contents", result.join(","));
+						$("#file-sample").text("");
+						$("#file-sample").append("Sample of file contents:<br/>");
+						_.each(_.first(result, 10), function(val) {							
+							$("#file-sample").append(_.escape(val) + "<br/>");
+						});
+						$("#file-sample").append("...etc...");
+						return result;
+					}					
+				})(file);
+				reader.readAsText(file);
+			} else {
+				$("#file-sample").text("Your browser doesn't support file reading. Try using Chrome?")
+				$("#file-submitd").attr("disabled", true);
+			}
+		},
+
+		createEntriesFromFile: function() {
+			var values = $("#file-sample").data("contents") || "";
+			_.each(values.split(","), function(val) {
+				Entries.create({name: val});
+			});
+			$("#file-input").val("");
+			$("#file-sample").text("");
 		},
 
 		createEntry: function(e){
